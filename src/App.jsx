@@ -11,7 +11,7 @@ function App() {
  const {user,setuser}=useContext(UserContext);
 const [filter,setfilter]=useState("");
 const [filterdata,setfilterdata]=useState([]);
-const url="https:job-tracker-backend-production-77a3.up.railway.app/application"
+const url="https://job-tracker-backend-production-77a3.up.railway.app/application"
 const navigate=useNavigate();
 
 const [status,setstatus]=useState('');

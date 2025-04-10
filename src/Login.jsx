@@ -3,7 +3,7 @@ import UserContext from './context/userContextProvider'
 import { useNavigate } from 'react-router-dom';
 
 const Login = () => {
-    const url="https:job-tracker-backend-production-77a3.up.railway.app/login"
+    const url="https://job-tracker-backend-production-77a3.up.railway.app/login"
     const {user,setuser}=useContext(UserContext);
     const [email, setEmail] = useState("");
     const [password, setPassword] = useState("");
