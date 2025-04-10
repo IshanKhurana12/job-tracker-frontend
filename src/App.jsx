@@ -52,9 +52,7 @@ async function handledelete(id){
   })
 
 setdata((prevData) => prevData.filter((item) => item._id !== id));
-  if(!result.ok){
-    console.log("Error deleting data");
-  }
+setfilterdata((prevData) => prevData.filter((item) => item._id !== id));
   
 }
 
