@@ -1,9 +1,10 @@
 import React, { useContext, useState } from 'react'
 import UserContext from './context/userContextProvider'
 import { useNavigate } from 'react-router-dom';
+import { BACKEND_URL } from './config';
 
 const Login = () => {
-    const url='https://job-tracker-backend-production-77a3.up.railway.app/login';
+   
     const {user,setuser}=useContext(UserContext);
     const [email, setEmail] = useState("");
     const [password, setPassword] = useState("");
@@ -19,7 +20,7 @@ const Login = () => {
         setLoading(true);
         setError(null);
         try {
-            const response = await fetch(url, {
+            const response = await fetch(`${BACKEND_URL}/login`, {
                 method: "POST",
                 headers: {
                     "Content-Type": "application/json",
